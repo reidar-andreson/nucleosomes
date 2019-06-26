@@ -44,7 +44,7 @@ bedtools bamtobed -i mapped_reads.bam > mapped_reads.bed
 # find intersections of all ChromHMM regions and mapped reads
 bedtools coverage -b K562_ChromHMM.bed -a mapped_reads.bed > reads_list.txt
 
-# count the results for each 15 ChromHMM regions
+# count the results for each 15 ChromHMM regions in 1kbp window
 perl count-read-region-intersect-averages.pl reads_list.txt | sort -k1n > results.txt
 ```
 

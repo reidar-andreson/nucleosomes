@@ -6,11 +6,7 @@
 # You can modify and distribute this script and derivateive works freely
 #
 
-use strict;
-use Getopt::Long;
-
-use strict;
-
+# Used restriction enzymes and their consensus sequences: 
 # AluI    AGCT
 # SaqAI   TTAA
 # MvaI    CCWGG, where W is A or T
@@ -23,6 +19,8 @@ use strict;
 # chr  start  end  enzyme  motif
 # Chr5	12072	12076	HinfI	gattc
 
+use strict;
+use Getopt::Long;
 
 my @names = qw(AluI SaqAI MvaI MvaI HinfI HinfI HinfI HinfI);
 my @sites = qw(AGCT TTAA CCAGG CCTGG GAATC GATTC GACTC GAGTC);
